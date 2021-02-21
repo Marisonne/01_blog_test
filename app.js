@@ -33,6 +33,36 @@ app.get('/marketing',(req,res)=>{
 })
 
 
+//create a comments array to save the comments inside 
+
+const commentsArr = [
+   {  
+    name: 'Faelan',
+    commentDate : new Date('18.02.2021'),
+    comment :" I'm an elf with long ears"
+},
+{  
+    name: 'Maèl',
+    commentDate : new Date('17.02.2021'),
+    comment :" I'm an elf with magic"
+},
+{  
+    name: 'Mirel',
+    commentDate : new Date('16.02.2021'),
+    comment :" I'm an elf. Do you like me?"
+}
+]
+
+
+app.get('/blog',(req,res)=>{
+    res.render('blog')
+})
+
+app.get('/contact',(req,res)=>{
+    res.render('contact')
+})
+
+
 app.listen(port,()=>{
     console.log(`app is running on port: ${port}`);
 })

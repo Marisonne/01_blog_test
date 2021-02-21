@@ -38,24 +38,24 @@ app.get('/marketing',(req,res)=>{
 const commentsArr = [
    {  
     name: 'Faelan',
-    commentDate : new Date('18.02.2021'),
+    commentDate : new Date('2021, 2, 18, 10'),
     comment :" I'm an elf with long ears"
 },
 {  
     name: 'Maèl',
-    commentDate : new Date('17.02.2021'),
+    commentDate : new Date('2021, 2, 17, 10'),
     comment :" I'm an elf with magic"
 },
 {  
     name: 'Mirel',
-    commentDate : new Date('16.02.2021'),
+    commentDate : new Date('2021, 2, 16, 10'),
     comment :" I'm an elf. Do you like me?"
 }
 ]
 
 
 app.get('/blog',(req,res)=>{
-    res.render('blog')
+    res.render('blog',{commentsArr})
 })
 
 app.get('/contact',(req,res)=>{
